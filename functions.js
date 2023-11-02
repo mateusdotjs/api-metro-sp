@@ -14,6 +14,7 @@ export function getAll(html) {
     };
   }
 
+  //tratamento das strings
   let linhas = dados.map((linha) => {
     let titulo;
 
@@ -34,4 +35,10 @@ export function getAll(html) {
   });
 
   return linhas;
+}
+
+export function getOne(linhas, id) {
+  const linha = linhas.filter((item) => item.id == id);
+  if(linha.length == 0) throw new Error ('Linha inexistente')
+  return linha[0];
 }
