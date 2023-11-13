@@ -1,8 +1,9 @@
 import express from "express";
 import { getAll, getOne } from "./functions.js";
+import {} from 'dotenv/config'
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 
 app.get("/", async (req, res) => {
   try {
