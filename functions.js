@@ -20,11 +20,11 @@ export function getAll(html) {
 
     if (linha.titulo.includes("-")) {
       let arr = linha.titulo.split("-");
-      titulo = `Linha ${linha.id} - ${arr[1].trim()}`;
+      titulo = `${arr[1].trim()}`;
     } else {
       let maiusculo = linha.titulo.slice(0, 1);
       let minusculo = linha.titulo.slice(1).toLowerCase();
-      titulo = `Linha ${linha.id} - ${maiusculo}${minusculo}`;
+      titulo = `${maiusculo}${minusculo}`;
     }
 
     return {
