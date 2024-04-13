@@ -12,9 +12,11 @@ app.get("/", async (req, res) => {
     const response = await fetch("https://www.viamobilidade.com.br/");
     const html = await response.text();
     const linhas = getAll(html);
-    res.status(200).send(linhas);
+    res.status(200).json(linhas);
   } catch (error) {
-    res.status(500).send(error);
+    res
+      .status(500)
+      .json({ error: "Ocorreu um erro ao processar a requisição" });
   }
 });
 
@@ -28,9 +30,11 @@ app.get("/linha/:id", async (req, res) => {
     res.status(200).send(linha);
   } catch (error) {
     if (error.message == "Linha inexistente") {
-      res.status(404).send({ error: error.message });
+      res.status(404).json({ error: error.message });
     } else {
-      res.status(500).send(error);
+      res
+        .status(500)
+        .json({ error: "Ocorreu um erro ao processar a requisição" });
     }
   }
 });
