@@ -30,7 +30,9 @@ export function getAll(html) {
     return {
       id: linha.id,
       titulo,
-      status: linha.status,
+      status: linha.status === "Circulação de Trens"
+      ? "Velocidade reduzida"
+      : linha.status,
     };
   });
 

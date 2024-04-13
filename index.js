@@ -4,7 +4,7 @@ import { getAll, getOne } from "./functions.js";
 import {} from "dotenv/config";
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 app.use(cors());
 
 app.get("/", async (req, res) => {
