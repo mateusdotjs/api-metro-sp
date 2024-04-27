@@ -2,9 +2,9 @@
 
 ## Visão Geral
 
-Este projeto é uma API construída com Node.js e Express para fornecer informações sobre o status das linhas de metrô em São Paulo, disponível em https://api-metro-sp.onrender.com/.
+Este projeto é uma API construída com TypeScript, Node.js, Express e Cheerio para fornecer informações sobre o status das linhas de metrô em São Paulo, disponível em https://api-metro-sp.onrender.com/.
 
- A primeira requisição pode demorar para ser respondida devido a politicas do Render.
+ A primeira requisição pode demorar cerca de 50 segundos para ser respondida devido ao cold start do Render.
 
 ## Endpoints
 
